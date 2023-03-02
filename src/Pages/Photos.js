@@ -2,6 +2,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 // //import { getAllPhotos } from "./Pages/Api";
 import Collection from "./Collection";
+import bubble from "../images/bubble.jpg";
 
 function Photos(props) {
     const [photo, setPhoto] = useState([]);
@@ -34,7 +35,8 @@ function Photos(props) {
             const response = await fetch(url, options)
             const data = await response.json()
             setPhoto(data)
-            console.log(data.src)
+            console.log(data)
+            // console.log(data.src)
         } catch(error)
         {
             console.log(error)
@@ -77,18 +79,30 @@ function Photos(props) {
 
 
     return(
-        <div>
+        <div className="photo-container">
             <h1> Photo Details </h1>
             <div className="photo-details">
-
-               
                 <ul>
                   <h2>{id}</h2>  
                   {/* <h3>{photo?.photographer}</h3> */}
                   <p>Name: {photo.photographer}</p> 
                   <p>Photo Name: {photo.alt}</p> 
                   <p>Photographer ID: {photo.photographer_id}</p> 
+                  <p>Photo Width: {photo.width}</p>
+                  <p>Photo Height: {photo.height}</p>
+                  <p>Photographer Page: {photo.photographer_url}</p>
+                  <p>Photo Page: {photo.url}</p>
+                  <div className="bubbles">
+                    <img src={bubble} alt={bubble}/>
+                    <img src={bubble} alt={bubble}/>
+                    <img src={bubble} alt={bubble}/>
+                    <img src={bubble} alt={bubble}/>
+                    <img src={bubble} alt={bubble}/>
+                    <img src={bubble} alt={bubble}/>
+                    
+                  </div>
                   
+
                   {/* <p>{photo.src.landscape}</p> */}
                 </ul> 
                  
