@@ -38,6 +38,7 @@ function Collection(props) {
         try{
             const response = await fetch(url, options)
             const data = await response.json()
+            console.log(data)
             setPhoto(data.photos)
             console.log(data.photos)
         } catch(error)

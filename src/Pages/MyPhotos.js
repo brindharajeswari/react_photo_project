@@ -1,7 +1,7 @@
-function About() {
+function MyPhotos() {
     return(
         <div> About Page</div>
     )
 }
 
-export default About;
+export default MyPhotos;

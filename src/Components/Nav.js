@@ -6,8 +6,8 @@ function Nav(props) {
             <Link to="/">
                <div>Home</div>
             </Link>
-            <Link to="/about">
-               <div>About</div>
+            <Link to="/myphoto">
+               <div>MyPhotos</div>
             </Link>  
             <Link to="/photos">
                <div> Photos</div>
