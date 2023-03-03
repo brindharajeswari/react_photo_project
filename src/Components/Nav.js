@@ -9,9 +9,9 @@ function Nav(props) {
             <Link to="/myphoto">
                <div>MyPhotos</div>
             </Link>  
-            <Link to="/photos">
+            {/* <Link to="/photos">
                <div> Photos</div>
-            </Link>  
+            </Link>   */}
             <Link to="/collection">
                <div>Collection</div>
             </Link>  

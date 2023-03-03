@@ -80,16 +80,17 @@ function Photos(props) {
 
     return(
         <div className="photo-container">
-            <h1> Photo Details </h1>
+            <h1 className="photo-title" > Photo Details </h1>
             <div className="photo-details">
                 <ul>
                   <h2>{id}</h2>  
                   {/* <h3>{photo?.photographer}</h3> */}
-                  <p>Name: {photo.photographer}</p> 
+                  <h1>Name: {photo.photographer}</h1> 
+                  {/* <img src = {photo.src.medium} alt = {photo.alt}/> */}
                   <p>Photo Name: {photo.alt}</p> 
                   <p>Photographer ID: {photo.photographer_id}</p> 
-                  <p>Photo Width: {photo.width}</p>
-                  <p>Photo Height: {photo.height}</p>
+                  <p>Width of Photo: {photo.width}</p>
+                  <p>Height of Photo: {photo.height}</p>
                   <p>Photographer Page: {photo.photographer_url}</p>
                   <p>Photo Page: {photo.url}</p>
                   <div className="bubbles">
@@ -98,8 +99,9 @@ function Photos(props) {
                     <img src={bubble} alt={bubble}/>
                     <img src={bubble} alt={bubble}/>
                     <img src={bubble} alt={bubble}/>
-                    <img src={bubble} alt={bubble}/>
-                    
+                    <img src={bubble} alt={bubble}/>                    
+                    <img src={bubble} alt={bubble}/>                    
+                    <img src={bubble} alt={bubble}/>                    
                   </div>
                   
 

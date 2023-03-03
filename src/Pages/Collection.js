@@ -54,6 +54,12 @@ function Collection(props) {
         getPhoto()     
       }, []);
 
+
+      function add(){
+        
+
+      }
+
       
 
     return(
@@ -62,8 +68,10 @@ function Collection(props) {
             {photo.map(photo =>
                 <Link to={`/collection/${photo.id}`} key={photo.id}>
                     {/* <h2>{photo.photographer}</h2> */}
-                    <div className="img-row">
+                    <div className="collection-img">
                       <img src = {photo.src.original} alt = {photo.alt}/>
+                      {/* button - add (local storage - reads in myphoto) */}
+                      <button onClick={add}> Like </button>
                     </div>
                 </Link>
              )}

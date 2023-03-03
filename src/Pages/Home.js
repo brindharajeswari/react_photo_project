@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+
 function Home() {
     const [photo, setPhoto] = useState([]);
     let [value, setValue] = useState("");
@@ -59,15 +60,16 @@ function Home() {
         
          <input className="search-container" 
                 type="text" 
-                placeholder="search for photos"
+                placeholder="search for photos..."
                 value={value} 
                 onChange={handleChange} />
 
-         <button onClick={() => onSearch(value)} style={{backgroundColor:" rgb(67, 213, 246)",
+         <button onClick={() => onSearch(value)}>Search</button> 
+         {/* style={{backgroundColor:" rgb(67, 213, 246)",
                                                          borderRadius:"15px", 
                                                          position:"relative",
                                                          top:"30px",
-                                                         left:"550px"}}>Search</button>
+                                                         left:"550px"}} */}
          
           <div className="collection-container">
             {/* let photoList = photo.filter((x) => x.src. === symbol) */}
@@ -76,7 +78,7 @@ function Home() {
              {photo.map(x =>  
              <>     
                {/* <h2>{x.photographer}</h2>  */}
-               <div className="img-row">
+               <div className="home-img">
                  <img src= {x.src.original} />   
                </div> 
             </>      
