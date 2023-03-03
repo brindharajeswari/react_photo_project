@@ -42,6 +42,17 @@ p{
   color: rgb(67, 213, 246);
 }
 
+.photo{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.like{
+  width:45px;
+
+}
 .photo-details{
   /* border: 2px solid rgb(67, 207, 246);
   display:flex;
@@ -76,7 +87,8 @@ p{
 }
 
 .collection-img:hover {
-  transform: scale(1.2) rotate(1deg);
+  /* transform: scale(1.2) rotate(1deg); */
+  filter:opacity(0.8);
   box-shadow: 3px 10px 10px rgba(0, 0, 0.8);
   }
 
