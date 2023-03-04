@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-
+import cam from "../images/cam.jpg";
+import SearchIcon from '@mui/icons-material/Search'; 
 
 function Home() {
     const [photo, setPhoto] = useState([]);
@@ -49,30 +50,30 @@ function Home() {
   
     function onSearch() {
       setSearch(value)
-
     }  
     
     return(
       <div className="home-container"> 
+      <div className="header">
+        <img className="logo" src={cam} alt={cam}/> 
         <h1 className="title"> A Lensational </h1> 
+      </div>
+      <div className="search">
         <h2> The best free stock of photos shared by creators.</h2>
+        <br></br>
+        <input className="search-container" 
+              type="text" 
+              placeholder="search for photos..."
+              value={value} 
+              onChange={handleChange} />
+        <button onClick={() => onSearch(value)}>Search</button> 
+      </div>
+      <div className="body">
 
+
+      </div>
         
-         <input className="search-container" 
-                type="text" 
-                placeholder="search for photos..."
-                value={value} 
-                onChange={handleChange} />
-
-         <button onClick={() => onSearch(value)}>Search</button> 
-         {/* style={{backgroundColor:" rgb(67, 213, 246)",
-                                                         borderRadius:"15px", 
-                                                         position:"relative",
-                                                         top:"30px",
-                                                         left:"550px"}} */}
-         
           <div className="collection-container">
-            {/* let photoList = photo.filter((x) => x.src. === symbol) */}
 
             
              {photo.map(x =>  

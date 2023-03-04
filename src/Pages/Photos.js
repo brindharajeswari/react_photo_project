@@ -10,7 +10,7 @@ function Photos(props) {
 
     let { id } = useParams()
 
-    // let navigate = useNavigate()
+    let navigate = useNavigate()
 
     // let photoList = photo.filter((x) => x.id === id)
     
@@ -36,49 +36,45 @@ function Photos(props) {
             const data = await response.json()
             setPhoto(data)
             console.log(data)
-            // console.log(data.src)
         } catch(error)
         {
             console.log(error)
         }
-        console.log(photo)
+
        }
+
+       function goBack(){
+        alert('test')
+        navigate('..')
+    }
+
+    const loaded = () => {
+        return(
+            <div>
+                 
+                <h2> {photo.photographer}</h2>
+                <button onClick={goBack}>Back</button>
+            </div>
+        )
+    }
+
+    const loading = () => {
+        return(
+            <div>Loading... </div>
+        )
+
+    }
+
+    // return coin ? loaded() : loading();
+    //console.log(symbol)   
 
 
     useEffect(() => {
         
-        getPhoto()     
+        getPhoto();
       }, []);
-
-    //   function goBack(){
-    //     alert('test')
-    //     navigate('..')
-    // }
-
-    //   const loaded = () => {
-    //     return(
-    //         <div>
-    //             <h1>{photo.id}</h1>  
-    //             <h2> {photo.photographer}</h2>
-    //             {/* <button onClick={goBack}>Back</button> */}
-    //         </div>
-    //     )
-    // }
-
-    // const loading = () => {
-    //     return(
-    //         <div>Loading... </div>
-    //     )
-
-    // }
-
-    // return photo ? loaded() : loading();
-    //console.log(symbol)   
-
-
-
-
-    return(
+      console.log(photo);
+      return(
         <div className="photo-container">
             <h1 className="photo-title" > Photo Details </h1>
             <div className="photo-details">
@@ -86,7 +82,7 @@ function Photos(props) {
                   <h2>{id}</h2>  
                   {/* <h3>{photo?.photographer}</h3> */}
                   <h1>Name: {photo.photographer}</h1> 
-                  {/* <img src = {photo.src.medium} alt = {photo.alt}/> */}
+                  {/* <img src = {photo.src} alt = {photo.alt}/> */}
                   <p>Photo Name: {photo.alt}</p> 
                   <p>Photographer ID: {photo.photographer_id}</p> 
                   <p>Width of Photo: {photo.width}</p>
@@ -118,6 +114,31 @@ function Photos(props) {
             </ul> */}
         </div>
     )
+
+    //   function goBack(){
+    //     alert('test')
+    //     navigate('..')
+    // }
+
+    //   const loaded = () => {
+    //     return(
+    //         <div>
+    //             <h1>{photo.id}</h1>  
+    //             <h2> {photo.photographer}</h2>
+    //             {/* <button onClick={goBack}>Back</button> */}
+    //         </div>
+    //     )
+    // }
+
+    // const loading = () => {
+    //     return(
+    //         <div>Loading... </div>
+    //     )
+
+    // }
+
+    // return photo ? loaded() : loading();
+    //console.log(symbol)   
 }
 
 export default Photos;

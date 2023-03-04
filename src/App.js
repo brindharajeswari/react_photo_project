@@ -18,7 +18,7 @@ function App() {
       <Nav />
        <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/my photos" element={<MyPhotos />} />
+        <Route path="/myphotos" element={<MyPhotos />} />
         <Route path="/collection" element={<Collection />} />      
         <Route path="/collection/:id" element={<Photos />} />      
              

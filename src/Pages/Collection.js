@@ -3,22 +3,21 @@ import { useNavigate, useParams } from "react-router-dom";
 //import { getAllPhotos } from "./Pages/Api";
 import { Link } from "react-router-dom";
 import MyPhotos from "./MyPhotos";
-
+// import '../App.css';
 
 function Collection(props) {
 
 
 
-    let { symbol } = useParams()
-
-    //let photoList = photos.filter((x) => x.symbol === symbol)
+    // let { symbol } = useParams()
 
     let key = process.env.REACT_APP_KEY
 
     let navigate = useNavigate()
 
     const [photo, setPhoto] = useState([]);
-    //const [likePhoto, setLikePhoto] = useState([]);
+    //const [likedPhoto, setLikedPhoto] = useState([]);
+
     let likeArr = []
 
 
@@ -55,15 +54,19 @@ function Collection(props) {
     useEffect(() => {
 
         getPhoto()
-    }, []);
+    }, []); 
+
+    //parse-converting str to original form
 
 
-    function add(e) {
-        console.log('add')
-        //setLikePhoto([...likePhoto,e.target.value])
+    function like(e) {
+        console.log('like')
+        //setLikedPhoto([...likedPhoto,e.target.value])
         likeArr.push(e.target.value)
-        //console.log(likePhoto)
+        //console.log(likedPhoto)
         console.log(likeArr)
+       localStorage.setItem('photo', JSON.stringify(likeArr))
+        
 
     }
 
@@ -83,7 +86,7 @@ function Collection(props) {
                         </div>
                     </Link>
 
-                    <button className="like" value={photo.id} onClick={add}> Like </button>
+                    <button className="like" value={photo.id} onClick={like}> Like </button>
                 </div>
             )}
         </div>
