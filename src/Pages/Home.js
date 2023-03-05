@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import cam from "../images/cam.jpg";
-import SearchIcon from '@mui/icons-material/Search'; 
+import InputAdornment from '@mui/material/InputAdornment';
+import { Icon, IconButton, styled, TextField } from "@mui/material";
+import SearchIcon from '@mui/icons-material/Search';
 
 function Home() {
+
     const [photo, setPhoto] = useState([]);
     let [value, setValue] = useState("");
     let [search, setSearch] = useState("people");
@@ -56,27 +59,27 @@ function Home() {
       <div className="home-container"> 
       <div className="header">
         <img className="logo" src={cam} alt={cam}/> 
-        <h1 className="title"> A Lensational </h1> 
+        <h1 className="title"> Lensational </h1> 
       </div>
       <div className="search">
         <h2> The best free stock of photos shared by creators.</h2>
-        <br></br>
-        <input className="search-container" 
-              type="text" 
-              placeholder="search for photos..."
-              value={value} 
-              onChange={handleChange} />
-        <button onClick={() => onSearch(value)}>Search</button> 
+
+
+        <TextField onChange={handleChange} style = {{width: 400, height: 30, border: 3}}
+        label="Search for photos (nature,flower,cats..)"
+        InputProps={{
+          endAdornment: (
+            <InputAdornment>
+              <IconButton onClick={() => onSearch(value)}>
+                <SearchIcon/>
+              </IconButton>
+            </InputAdornment>
+          )
+        }}
+      />
       </div>
       <div className="body">
-
-
-      </div>
-        
-          <div className="collection-container">
-
-            
-             {photo.map(x =>  
+      {photo.map(x =>  
              <>     
                {/* <h2>{x.photographer}</h2>  */}
                <div className="home-img">
@@ -84,6 +87,13 @@ function Home() {
                </div> 
             </>      
              )}
+
+
+      </div>
+        
+          <div className="collection-container">
+
+            
 
           </div>
         

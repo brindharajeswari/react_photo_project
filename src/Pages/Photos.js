@@ -74,6 +74,8 @@ function Photos(props) {
         getPhoto();
       }, []);
       console.log(photo);
+
+
       return(
         <div className="photo-container">
             <h1 className="photo-title" > Photo Details </h1>
@@ -82,7 +84,7 @@ function Photos(props) {
                   <h2>{id}</h2>  
                   {/* <h3>{photo?.photographer}</h3> */}
                   <h1>Name: {photo.photographer}</h1> 
-                  {/* <img src = {photo.src} alt = {photo.alt}/> */}
+                  <img src = {photo.src} alt = {photo.alt}/>
                   <p>Photo Name: {photo.alt}</p> 
                   <p>Photographer ID: {photo.photographer_id}</p> 
                   <p>Width of Photo: {photo.width}</p>
@@ -114,6 +116,8 @@ function Photos(props) {
             </ul> */}
         </div>
     )
+
+    
 
     //   function goBack(){
     //     alert('test')

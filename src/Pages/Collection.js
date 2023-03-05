@@ -1,3 +1,5 @@
+import { FavoriteBorder, Favorite } from "@mui/icons-material";
+import { Button, IconButton } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 //import { getAllPhotos } from "./Pages/Api";
@@ -8,6 +10,13 @@ import MyPhotos from "./MyPhotos";
 function Collection(props) {
 
 
+    const [likeArr, setLikeArray] = useState(() => {
+        // getting stored value
+        const saved = localStorage.getItem("photo");
+        const initialValue = JSON.parse(saved);
+        console.log(initialValue);
+        return initialValue ||  [];
+      });
 
     // let { symbol } = useParams()
 
@@ -18,8 +27,7 @@ function Collection(props) {
     const [photo, setPhoto] = useState([]);
     //const [likedPhoto, setLikedPhoto] = useState([]);
 
-    let likeArr = []
-
+      
 
     let url = `https://api.pexels.com/v1/search?query=people`
 
@@ -59,18 +67,20 @@ function Collection(props) {
     //parse-converting str to original form
 
 
-    function like(e) {
-        console.log('like')
-        //setLikedPhoto([...likedPhoto,e.target.value])
-        likeArr.push(e.target.value)
-        //console.log(likedPhoto)
+    function handleIconClick(id) {
+        const value = parseInt(id,10);
+        if((likeArr.includes(value))) {
+            const index = likeArr.indexOf(value);
+            if (index > -1) { // only splice array when item is found
+             likeArr.splice(index, 1); // 2nd parameter means remove one item only
+            }
+        } else {
+            likeArr.push(value)
+        }
         console.log(likeArr)
        localStorage.setItem('photo', JSON.stringify(likeArr))
-        
 
     }
-
-
 
     return (
         <>
@@ -85,16 +95,19 @@ function Collection(props) {
                             {/* button - add (local storage - reads in myphoto) */}
                         </div>
                     </Link>
-
-                    <button className="like" value={photo.id} onClick={like}> Like </button>
-                </div>
+                    <Button className="like" value={photo.id} onClick={(e) => handleIconClick(e.currentTarget.value)}>
+                             { isFavorite(photo.id) ? <Favorite /> : <FavoriteBorder />}
+                    </Button>
+               </div>
             )}
-        </div>
-        <div>
-           <MyPhotos likeArr={likeArr}/>
         </div>
         </>
     )
+
+    function isFavorite(id) {
+        const value = parseInt(id);
+      return likeArr.indexOf(value) > -1;
+    }
 
     //     function goBack(){
     //         alert('test')
