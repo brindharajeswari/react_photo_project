@@ -36,7 +36,7 @@ function MyPhotos(){
     }
 
     useEffect(() => {
-        var arrayLength = likeArr.length;
+        const arrayLength = likeArr.length;
         for (var i = 0; i < arrayLength; i++) {
             const photoId = likeArr[i];
             url = `https://api.pexels.com/v1/photos/${photoId}`
@@ -44,10 +44,6 @@ function MyPhotos(){
         }
       }, []);
       console.log(photo)
-
-      
-
-
 
     return(
         <div className="home-container"> 
@@ -74,6 +70,8 @@ function MyPhotos(){
 
   
 export default MyPhotos;
+
+
 
 // const loaded = () => {
 //     return(

@@ -1,7 +1,7 @@
 import { FavoriteBorder, Favorite } from "@mui/icons-material";
 import { Button, IconButton } from "@mui/material";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+//import { useNavigate, useParams } from "react-router-dom";
 //import { getAllPhotos } from "./Pages/Api";
 import { Link } from "react-router-dom";
 import MyPhotos from "./MyPhotos";
@@ -22,7 +22,7 @@ function Collection(props) {
 
     let key = process.env.REACT_APP_KEY
 
-    let navigate = useNavigate()
+    //let navigate = useNavigate()
 
     const [photo, setPhoto] = useState([]);
     //const [likedPhoto, setLikedPhoto] = useState([]);
