@@ -18,6 +18,10 @@ function Nav() {
             <Link to="/collection">
                <div>Collection</div>
             </Link>  
+
+            <Link to="/contact">
+               <div>Contact</div>
+            </Link>
         </div>
     )
 }

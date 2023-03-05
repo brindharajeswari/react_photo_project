@@ -28,6 +28,10 @@ Nav.js:
 -------
 Created links for Home page, MyPhoto page, Collection page.
 
+Contact.js:
+-----------
+Created form to submit (Name, email, phone and message)
+
 Pages:
 ******
 Home  

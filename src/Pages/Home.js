@@ -57,27 +57,30 @@ function Home() {
     
     return(
       <div className="home-container"> 
+
       <div className="header">
         <img className="logo" src={cam} alt={cam}/> 
         <h1 className="title"> Lensational </h1> 
       </div>
+
       <div className="search">
         <h2> The best free stock of photos shared by creators.</h2>
 
 
         <TextField onChange={handleChange} style = {{width: 400, height: 30, border: 3}}
-        label="Search for photos (nature,flower,cats..)"
-        InputProps={{
-          endAdornment: (
-            <InputAdornment>
+         label="Search for photos (nature,flowers,cats..)"
+          InputProps={{
+            endAdornment: (
+             <InputAdornment>
               <IconButton onClick={() => onSearch(value)}>
                 <SearchIcon/>
               </IconButton>
-            </InputAdornment>
-          )
-        }}
-      />
+             </InputAdornment>
+            )
+          }}
+        />
       </div>
+
       <div className="body">
       {photo.map(x =>  
              <>     
@@ -85,13 +88,13 @@ function Home() {
                <div className="home-img">
                  <img src= {x.src.original} />   
                </div> 
-            </>      
+              </>      
              )}
 
 
       </div>
         
-          <div className="collection-container">
+          <div >
 
             
 
