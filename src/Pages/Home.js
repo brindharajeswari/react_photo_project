@@ -86,7 +86,7 @@ function Home() {
              <>     
                {/* <h2>{x.photographer}</h2>  */}
                <div className="home-img">
-                 <img src= {x.src.original} />   
+                 <img src= {x.src.original}style={{ width:"400px",height: "400px", objectFit:"cover"}} />   
                </div> 
               </>      
              )}

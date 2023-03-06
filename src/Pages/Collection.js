@@ -70,7 +70,7 @@ function Collection(props) {
     function handleIconClick(id) {
         const value = parseInt(id,10);
         if((likeArr.includes(value))) {
-            const index = likeArr.indexOf(value);
+            const index = likeArr.indexOf(value);  //moving obj from one array to another
             if (index > -1) { // only splice array when item is found
              likeArr.splice(index, 1); // 2nd parameter means remove one item only
             }
@@ -91,7 +91,7 @@ function Collection(props) {
                     <Link to={`/collection/${photo.id}`} key={photo.id}>
                         {/* <h2>{photo.photographer}</h2> */}
                         <div className="collection-img">
-                            <img src={photo.src.original} alt={photo.alt} />
+                            <img src={photo.src.original} alt={photo.alt} style={{ width:"400px",height: "400px", objectFit:"cover"}} />
                             {/* button - add (local storage - reads in myphoto) */}
                         </div>
                     </Link>

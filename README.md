@@ -52,6 +52,7 @@ Home Page :
     "@mui/icons-core": "^5.11.11",
     "@mui/material": "^5.11.11",
   Search icon link - `https://mui.com/material-ui/material-icons/?query=search`
+  `https://mui.com/material-ui/api/input-adornment/`
 * Added logo and Title
   Logo - Using Canva edited and downloaded the cam.jpg 
   Adjusted the width, height in CSS
@@ -70,6 +71,7 @@ useEffect to get data(photo)
 Used Map method to display the pictures.
 Created link to Photos page to see Photo details
 Added favorite button(heart) - `https://mui.com/material-ui/material-icons/?query=heart&selected=FavoriteBorder`
+`https://mui.com/material-ui/react-button/`
 Implemented Local storage :
 setItem(): to add a key and a value to localStorage
 localStorage.setItem('items', JSON.stringify(items));
@@ -85,7 +87,7 @@ This page display the Photo details:
  -Name
  -Photo Name
  -Photographer ID
- -Width of Photop>
+ -Width of Photo
  -Height of Photo
  -Photographer Page
  -Photo Page
@@ -97,3 +99,24 @@ MyPhoto:
 The liked image in collection page will be seen in MyPhoto page.
 we already added image in local storage(setItem() - collection page),
 now to get the image from local storage(getItem()- MyPhoto page)
+source:
+********
+-local storage: https://www.freecodecamp.org/news/how-to-use-localstorage-with-react-hooks-to-set-and-get-items/
+-loop through an array: https://stackoverflow.com/questions/3010840/loop-through-an-array-in-javascript
+-useEffect: https://blog.logrocket.com/useeffect-hook-complete-guide/ and https://www.w3schools.com/react/react_useeffect.asp
+-fetch data from an api: https://designcode.io/react-hooks-handbook-fetch-data-from-an-api
+
+Challange i faced:
+------------------
+Though i set the data in local storage(photoID - key & value), initially i couldnt able to get the data from storage.
+made some useEffect changes and used looping through an array, got the picture on MyPhoto page but it took 2-4 minutes to display the picture.
+Now i know im going in a right direction but find it difficult to retrive the 'liked' photo.
+https://designcode.io/react-hooks-handbook-fetch-data-from-an-api - this page helped me how to fetch the data from an API.
+Ta-da - when i hit the like button on Collection page, i can see it on MyPhoto page. It took me 2 and a half day to figure it out :)
+
+________________________________________________________________________________________________________________________
+
+github repo Link - https://github.com/brindharajeswari/react_photo_project
+Hosted on Netlify: Link - https://main--zesty-kulfi-d1ffaa.netlify.app/
+
+_________________________________________________________________________________________________________________________
