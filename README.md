@@ -1,7 +1,7 @@
 Selecting an API:
 -----------------
-API List - `https://apilist.fun/api/pexels`
-Pexel doc -`https://www.pexels.com/api/documentation/#introduction`
+1. API List - `https://apilist.fun/api/pexels`
+2. Pexel doc -`https://www.pexels.com/api/documentation/#introduction`
 Got API key and URL
 
 #index.js:
@@ -34,10 +34,10 @@ Created form to submit (Name, email, phone and message)
 
 Pages:
 ******
-Home  
-Collection
-Photo
-MyPhotos
+- Home  
+- Collection
+- Photo
+- MyPhotos
 
 Home Page :
 ---------
@@ -62,19 +62,20 @@ Home Page :
 
 Collection:
 ------------  
-Used useState and useEffect Hook
-Pexel url = `https://api.pexels.com/v1/search?query=people`
-Next day URL and key didnt work, so used `https://rapidapi.com/`
+* Used useState and useEffect Hook
+* Pexel url = `https://api.pexels.com/v1/search?query=people`
+* Next day URL and key didnt work, so used `https://rapidapi.com/`
 `https://rapidapi.com/pexels-pexels-default/api/Pexels/`
-Used try and catch method to fetch data
-useEffect to get data(photo)
-Used Map method to display the pictures.
-Created link to Photos page to see Photo details
-Added favorite button(heart) - `https://mui.com/material-ui/material-icons/?query=heart&selected=FavoriteBorder`
+* Used try and catch method to fetch data
+* useEffect to get data(photo)
+* Used Map method to display the pictures.
+* Created link to Photos page to see Photo details
+* Added favorite button(heart) - `https://mui.com/material-ui/material-icons/?query=heart&selected=FavoriteBorder`
 `https://mui.com/material-ui/react-button/`
-Implemented Local storage :
-setItem(): to add a key and a value to localStorage
-localStorage.setItem('items', JSON.stringify(items));
+* Implemented Local storage :
+ - setItem(): to add a key and a value to localStorage
+ - localStorage.setItem('items', JSON.stringify(items));
+
 source : 
 *********
 https://www.freecodecamp.org/news/how-to-use-localstorage-with-react-hooks-to-set-and-get-items/
@@ -83,28 +84,29 @@ Net Ninja - https://www.youtube.com/watch?v=SOnMln3W0U8
 
 Photos:
 --------
-This page display the Photo details:
- -Name
- -Photo Name
- -Photographer ID
- -Width of Photo
- -Height of Photo
- -Photographer Page
- -Photo Page
-Added 8 bubble image, adjusted the size of each bubble
+*This page display the Photo details:
+ - Name
+ - Photo Name
+ - Photographer ID
+ - Width of Photo
+ - Height of Photo
+ - Photographer Page
+ - Photo Page
+* Added 8 bubble image, adjusted the size of each bubble
 and set timings for each bubble(1.5s,4s,2s..) and added animation in the css
 
 MyPhoto:
 ---------
-The liked image in collection page will be seen in MyPhoto page.
-we already added image in local storage(setItem() - collection page),
-now to get the image from local storage(getItem()- MyPhoto page)
+* The liked image in collection page will be seen in MyPhoto page.
+* we already added image in local storage(setItem() - collection page),
+* now to get the image from local storage(getItem()- MyPhoto page)
+
 source:
 ********
--local storage: https://www.freecodecamp.org/news/how-to-use-localstorage-with-react-hooks-to-set-and-get-items/
--loop through an array: https://stackoverflow.com/questions/3010840/loop-through-an-array-in-javascript
--useEffect: https://blog.logrocket.com/useeffect-hook-complete-guide/ and https://www.w3schools.com/react/react_useeffect.asp
--fetch data from an api: https://designcode.io/react-hooks-handbook-fetch-data-from-an-api
+- local storage: https://www.freecodecamp.org/news/how-to-use-localstorage-with-react-hooks-to-set-and-get-items/
+- loop through an array: https://stackoverflow.com/questions/3010840/loop-through-an-array-in-javascript
+- useEffect: https://blog.logrocket.com/useeffect-hook-complete-guide/ and https://www.w3schools.com/react/react_useeffect.asp
+- fetch data from an api: https://designcode.io/react-hooks-handbook-fetch-data-from-an-api
 
 Challange i faced:
 ------------------
