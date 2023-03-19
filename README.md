@@ -101,8 +101,8 @@ MyPhoto:
 * we already added image in local storage(setItem() - collection page),
 * now to get the image from local storage(getItem()- MyPhoto page)
 
-source:
-********
+Resource:
+*********
 - local storage: https://www.freecodecamp.org/news/how-to-use-localstorage-with-react-hooks-to-set-and-get-items/
 - loop through an array: https://stackoverflow.com/questions/3010840/loop-through-an-array-in-javascript
 - useEffect: https://blog.logrocket.com/useeffect-hook-complete-guide/ and https://www.w3schools.com/react/react_useeffect.asp
@@ -114,11 +114,11 @@ Though i set the data in local storage(photoID - key & value), initially i could
 made some useEffect changes and used looping through an array, got the picture on MyPhoto page but it took 2-4 minutes to display the picture.
 Now i know im going in a right direction but find it difficult to retrive the 'liked' photo.
 https://designcode.io/react-hooks-handbook-fetch-data-from-an-api - this page helped me how to fetch the data from an API.
-Ta-da - when i hit the like button on Collection page, i can see it on MyPhoto page. It took me 2 and a half day to figure it out :)
+Ta-da - when i hit the like button on Collection page, i can see it on MyPhoto page. :)
 
 ________________________________________________________________________________________________________________________
 
-github repo Link - https://github.com/brindharajeswari/react_photo_project
-Hosted on Netlify: Link - https://main--zesty-kulfi-d1ffaa.netlify.app/
+* github repo Link - https://github.com/brindharajeswari/react_photo_project
+* Hosted on Netlify: Link - https://main--zesty-kulfi-d1ffaa.netlify.app/
 
 _________________________________________________________________________________________________________________________

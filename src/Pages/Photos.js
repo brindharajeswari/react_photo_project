@@ -51,17 +51,21 @@ function Photos(props) {
       console.log(photo);
 
       
-      if(photo != undefined && photo.src != undefined )  {
+      if(photo !== undefined && photo.src !== undefined )  {
         return(
+            
             <div className="photo-container">
+                
                 <h1 className="photo-title" > Photo Details </h1>
                 <div className="photo-details">
                     <ul>
                       <h2>{id}</h2>  
                       {/* <h3>{photo?.photographer}</h3> */}
                       <h1>Name: {photo.photographer}</h1> 
-                      {/* { <img src = {photo.src.original} alt = {photo.alt} style={{display:"flex",justifyContent:"center", alignItems:"center",
+                      
+                    {/* { <img src = {photo.src.original} alt = {photo.alt} style={{display:"flex",justifyContent:"center", alignItems:"center",
                                                                                     width:"400px",height: "400px", objectFit:"cover"}}/> } */}
+        
                       <p>Photo Name: {photo.alt}</p> 
                       <p>Photographer ID: {photo.photographer_id}</p> 
                       <p>Width of Photo: {photo.width}</p>

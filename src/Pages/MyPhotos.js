@@ -25,7 +25,7 @@ function MyPhotos(){
         // getting stored value
         const saved = localStorage.getItem("photo");
         const initialValue = JSON.parse(saved);
-        return initialValue ||  [];
+        return initialValue ||  [];    //no value ls-returns empty array
       });
 
 
